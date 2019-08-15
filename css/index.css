@@ -168,7 +168,7 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .container {
     padding: 0 20px;
   }
@@ -354,7 +354,7 @@ img {
 .home .content-pick .destination .btn:focus::after {
   animation: 200ms ease 0ms 1 normal forwards running slide-right-fade-in;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 6000px) {
   .home .content-section {
     display: flex;
     flex-flow: column wrap;
