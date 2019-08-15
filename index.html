@@ -119,6 +119,66 @@
           <button class="btn">Sign Me Up!</button>
         </div>
       </section>
+      <section class="destination-form">
+        <h2>Take a Trip Today!</h2>
+        <form action="">
+          <div>
+            <fieldset>
+              <legend>Choose Your Package</legend>
+              <input
+                type="radio"
+                name="gender"
+                value="Fun In The Sun"
+                id="fun-in-the-sun"
+                checked
+              />
+              <label for="fun-in-the-sun">Fun In The Sun</label>
+              <input
+                type="radio"
+                name="gender"
+                value="Mountain Excursion"
+                id="mountain-excursion"
+                checked
+              />
+              <label for="mountain-excursion">Mountain Excursion</label>
+              <input
+                type="radio"
+                name="gender"
+                value="Island Getaway"
+                id="island-getaway"
+                checked
+              />
+              <label for="island-getaway">Island Getaway</label>
+            </fieldset>
+            <fieldset>
+              <legend>Trip Information</legend>
+              <div class="form-section">
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="form-section">
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="form-section">
+                <label for="phonenumber">Phone: </label>
+                <input
+                  type="phonenumber"
+                  name="phonenumber"
+                  id="phonenumber"
+                  required
+                />
+              </div>
+              <div class="form-section">
+                <label for="instructions">special Instructions: </label>
+                <textarea name="instructions" id="instructions" required>
+                </textarea>
+              </div>
+            </fieldset>
+            <button class="btn">Let's Go!</button>
+          </div>
+        </form>
+      </section>
     </div>
     <!-- container -->
 
