@@ -201,6 +201,23 @@ img {
   color: #212529;
   font-size: 1.3rem;
 }
+@media screen and (max-width: 500px) {
+  .header nav div {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .header nav a {
+    padding: 15px 0 5px;
+  }
+  .header nav .nav-links {
+    width: 100%;
+  }
+  .header nav .nav-links li {
+    height: initial;
+  }
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;

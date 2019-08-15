@@ -25,3 +25,25 @@
     } // end .nav-links
   } // end nav
 } // end header
+
+// Mobile Media Query
+@media @mobile {
+  .header {
+    nav {
+      div {
+        .flex(column, wrap, center, center);
+      }
+
+      a {
+        padding: 15px 0 5px;
+      }
+
+      .nav-links {
+        width: 100%;
+        li {
+          height: initial;
+        }
+      }
+    } // end nav
+  } //end .header
+} // end @media @mobile
