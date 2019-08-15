@@ -173,6 +173,46 @@ img {
     padding: 0 20px;
   }
 }
+@-webkit-keyframes slide-right-fade-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(15px, 0, 0);
+  }
+}
+@-webkit-keyframes slide-left-fade-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(-15px, 0, 0);
+  }
+}
+@keyframes slide-right-fade-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(15px, 0, 0);
+  }
+}
+@keyframes slide-left-fade-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(-15px, 0, 0);
+  }
+}
 .header nav {
   border-bottom: 2px dashed #c0c0c0;
 }
@@ -298,8 +338,21 @@ img {
   width: 100%;
   font-size: 1.5rem;
 }
+.home .content-pick .destination .btn::before,
+.home .content-pick .destination .btn::after {
+  content: "🎉";
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  display: inline-block;
+}
 .home .content-pick .destination .btn:focus {
   box-shadow: 0 0 3px 0 #212529;
+}
+.home .content-pick .destination .btn:focus::before {
+  animation: 200ms ease 0ms 1 normal forwards running slide-left-fade-in;
+}
+.home .content-pick .destination .btn:focus::after {
+  animation: 200ms ease 0ms 1 normal forwards running slide-right-fade-in;
 }
 @media screen and (max-width: 500px) {
   .home .content-section {
