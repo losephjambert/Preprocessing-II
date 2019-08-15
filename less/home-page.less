@@ -70,3 +70,58 @@
     }
   }
 } // home
+
+// Mobile Media Query
+@media @mobile {
+  .home {
+    .content-section {
+      .flex(
+        @direction: column,
+        @wrap: wrap,
+        @justify: flex-start,
+        @align: flex-start
+      );
+
+      .text-content {
+        width: 100%;
+        padding-right: 0;
+      }
+
+      .img-content {
+        width: 100%;
+        padding-left: 0;
+        img {
+          width: 100%;
+        }
+      }
+    } // end .content-section
+
+    .inverse-content {
+      flex-direction: column-reverse;
+
+      .text-content {
+        padding-left: 0;
+      }
+
+      .img-content {
+        padding-right: 0;
+      }
+    } // end .inverse-content
+
+    .content-destination {
+      width: 100%;
+    } // end .content-destination
+
+    .content-pick {
+      .flex(
+        @direction: column,
+        @wrap: wrap,
+        @justify: flex-start,
+        @align: center
+      );
+      .destination {
+        width: 80%;
+      }
+    } //end .content-pick
+  } // end .home
+}

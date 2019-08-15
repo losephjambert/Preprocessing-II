@@ -301,3 +301,43 @@ img {
 .home .content-pick .destination .btn:focus {
   box-shadow: 0 0 3px 0 #212529;
 }
+@media screen and (max-width: 500px) {
+  .home .content-section {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .home .content-section .text-content {
+    width: 100%;
+    padding-right: 0;
+  }
+  .home .content-section .img-content {
+    width: 100%;
+    padding-left: 0;
+  }
+  .home .content-section .img-content img {
+    width: 100%;
+  }
+  .home .inverse-content {
+    flex-direction: column-reverse;
+  }
+  .home .inverse-content .text-content {
+    padding-left: 0;
+  }
+  .home .inverse-content .img-content {
+    padding-right: 0;
+  }
+  .home .content-destination {
+    width: 100%;
+  }
+  .home .content-pick {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .home .content-pick .destination {
+    width: 80%;
+  }
+}
