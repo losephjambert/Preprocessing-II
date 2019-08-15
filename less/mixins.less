@@ -1,10 +1,14 @@
 // Mixins in here
+
+// flex box
 .flex (@direction: row, @wrap: wrap, @justify: center, @align: center) {
   display: flex;
   flex-flow: @direction @wrap;
   justify-content: @justify;
   align-items: @align;
 }
+
+// buttons
 .button-signup(
   @color: @white,
   @bg-color: @button-bg,
