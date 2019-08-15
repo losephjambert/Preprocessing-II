@@ -169,7 +169,7 @@ img {
   margin: 0 auto;
 }
 .header nav {
-  border-bottom: 2px dashed #C0C0C0;
+  border-bottom: 2px dashed #c0c0c0;
 }
 .header nav div {
   display: flex;
@@ -204,7 +204,7 @@ img {
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
-  background: #FFEBCD;
+  background: #ffebcd;
 }
 .footer p {
   text-align: center;
@@ -213,7 +213,7 @@ img {
   padding: 20px;
 }
 .main-header {
-  border-bottom: 2px dashed #C0C0C0;
+  border-bottom: 2px dashed #c0c0c0;
   padding-bottom: 10px;
 }
 .main-header img {
@@ -238,7 +238,7 @@ img {
 }
 .home .inverse-content {
   padding-bottom: 30px;
-  border-bottom: 2px dashed #C0C0C0;
+  border-bottom: 2px dashed #c0c0c0;
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -257,11 +257,25 @@ img {
 }
 .home .content-pick {
   padding-top: 30px;
-  border-top: 2px dashed #C0C0C0;
+  border-top: 2px dashed #c0c0c0;
   display: flex;
   justify-content: space-between;
 }
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+.home .content-pick .destination .btn {
+  border: none;
+  outline: none;
+  background-color: #17a2b8;
+  color: #ffffff;
+  transition: 200ms;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 1.5rem;
+}
+.home .content-pick .destination .btn:focus {
+  box-shadow: 0 0 3px 0 #212529;
 }

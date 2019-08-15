@@ -5,3 +5,23 @@
   justify-content: @justify;
   align-items: @align;
 }
+.button-signup(
+  @color: @white,
+  @bg-color: @button-bg,
+  @padding: 5px,
+  @radius: 3px,
+  @focus: @button-focus,
+  @width: auto
+  ) {
+  border: none;
+  outline: none;
+  background-color: @bg-color;
+  color: @color;
+  transition: @focus-timing;
+  padding: @padding;
+  border-radius: @radius;
+  width: @width;
+  &:focus {
+    box-shadow: 0 0 3px 0 @focus;
+  }
+}
