@@ -1,1 +1,49 @@
 // Navigation Styles here
+.header {
+  nav {
+    border-bottom: 2px dashed @navigation-border;
+    div {
+      .flex(row, wrap, space-between, center);
+    }
+    a {
+      color: @font-color;
+      text-decoration: none;
+    }
+    .nav-links {
+      .flex(row, wrap, space-evenly, center);
+      flex: 0 1 45%;
+      li {
+        .flex();
+        height: 80px;
+      }
+      a {
+        padding: 5px;
+        text-decoration: none;
+        color: @font-color;
+        font-size: 1.3rem;
+      }
+    } // end .nav-links
+  } // end nav
+} // end header
+
+// Mobile Media Query
+@media @mobile {
+  .header {
+    nav {
+      div {
+        .flex(column, wrap, center, center);
+      }
+
+      a {
+        padding: 15px 0 5px;
+      }
+
+      .nav-links {
+        width: 100%;
+        li {
+          height: initial;
+        }
+      }
+    } // end nav
+  } //end .header
+} // end @media @mobile

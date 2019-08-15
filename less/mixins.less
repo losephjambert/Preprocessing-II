@@ -1,1 +1,71 @@
 // Mixins in here
+
+// flex box
+.flex (@direction: row, @wrap: wrap, @justify: center, @align: center) {
+  display: flex;
+  flex-flow: @direction @wrap;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+//animations
+.animation(
+  @duration: 200ms,
+  @timing-function: ease,
+  @delay: 0ms,
+  @iteration-count: 1,
+  @direction: normal,
+  @fill-mode: none,
+  @play-state: running,
+  @name
+  ) {
+  animation: @duration @timing-function @delay @iteration-count @direction
+    @fill-mode @play-state @name;
+}
+
+// buttons
+.button-signup(
+  @color: @white,
+  @bg-color: @button-bg,
+  @padding: 5px,
+  @radius: 3px,
+  @focus: @button-focus,
+  @width: auto
+  ) {
+  border: none;
+  outline: none;
+  background-color: @bg-color;
+  color: @color;
+  transition: @focus-timing;
+  padding: @padding;
+  border-radius: @radius;
+  width: @width;
+  &::before,
+  &::after {
+    content: "🎉";
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    display: inline-block;
+  }
+  &:focus {
+    box-shadow: 0 0 3px 0 @focus;
+    &::before {
+      .animation(
+        @duration: 200ms,
+        @timing-function: ease,
+        @fill-mode: forwards,
+        @name: slide-left-fade-in,
+        @iteration-count: 1
+      );
+    }
+    &::after {
+      .animation(
+        @duration: 200ms,
+        @timing-function: ease,
+        @fill-mode: forwards,
+        @name: slide-right-fade-in,
+        @iteration-count: 1
+      );
+    }
+  }
+}
